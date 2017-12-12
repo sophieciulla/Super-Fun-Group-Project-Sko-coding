@@ -4,7 +4,15 @@ public class MainMenu
 
 		public static void main(String[] args)
 			{
-				menuChoice();
+			System.out.println("Hello");
+			createArray();	
+      menuChoice();
+			}
+
+		private static void createArray()
+			{
+			
+				
 			}	
 			public static void menuChoice()
 			{
