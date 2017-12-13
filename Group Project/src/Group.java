@@ -9,8 +9,9 @@ public class Group
 	private String classGrade2;
 	private String thirdClass;
 	private String classGrade3;    
+	private String GPA;
 	
-	public Group (String fn, String ln, String fc, String cg1, String sc, String cg2, String tc, String cg3)
+	public Group (String fn, String ln, String fc, String cg1, String sc, String cg2, String tc, String cg3, String g)
 		{
 		firstName = fn;
 		lastName = ln;
@@ -20,6 +21,7 @@ public class Group
 		classGrade2 = cg2;
 		thirdClass = tc;
 		classGrade3 = cg3;
+		GPA = g;
 		}
 
 	public String getFirstName()
@@ -101,4 +103,10 @@ public class Group
 		{
 		this.classGrade3 = classGrade3;
 		}
+
+	public String getGPA()
+		{
+		return GPA;
+		}
+
 	}
