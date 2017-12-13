@@ -15,7 +15,6 @@ import java.text.*;
 			System.out.println("Hello");
 			createArray();	
 			menuChoice();
-			sortStudents();
 			}
 
 		private static void sortStudents()
@@ -40,10 +39,6 @@ import java.text.*;
 				GPA = (gradeValueOne + gradeValueTwo + gradeValueThree) / 3;
 				students.add(new Group (array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], df.format(GPA)));
 				}	
-			for (int i = 0; i < students.size(); i++)
-				{
-				System.out.println(students.get(i).getGPA());
-				}
 			}	
 		
 			private static void calculateGPAThree()
@@ -196,6 +191,32 @@ import java.text.*;
 				System.out.println("   1) Add or delete a student");
 				System.out.println("   2) Change student grades/schedule");
 				System.out.println("   3) Sort students");
+				java.util.Scanner userInput = new Scanner(System.in);
+				int selection = userInput.nextInt();
+				if (selection == 1)
+					{
+					changeRoster();
+					}
+				else if (selection == 2)
+					{
+					changeGrades();
+					}
+				else 
+					{
+					sortStudents();
+					}
 			}
+
+			private static void changeGrades()
+				{
+				// TODO Auto-generated method stub
+				
+				}
+
+			private static void changeRoster()
+				{
+				// TODO Auto-generated method stub
+				
+				}
 
 	}
