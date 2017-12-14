@@ -43,7 +43,7 @@ import java.text.*;
 			{
 			Collections.sort(students, new LastNameComparator());
 			Collections.sort(students, new GPASorter());
-			for (int i = students.size() - 1; i >= 0; i--)
+			for (int i = 0; i < students.size(); i++)
 				{
 				System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName() + ": ");
 				System.out.println("   First Period: " + students.get(i).getFirstClass() + ": " + students.get(i).getClassGrade1());
