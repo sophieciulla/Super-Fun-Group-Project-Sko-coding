@@ -2,8 +2,9 @@
 import java.io.*;
 import java.util.*;
 import java.text.*;
-;public class MainMenu
+public class MainMenu
 	{
+
 		static ArrayList<Student> students = new ArrayList<Student>();
 		static String[] array;
 		static double GPA;
@@ -13,9 +14,10 @@ import java.text.*;
 		public static void main(String[] args) throws IOException
 			{
 			System.out.println("Hello");
-			createArray();	
+			CreateArray.createArray();	
 			menuChoice();
 			}
+
 
 		private static void sortStudents()
 			{
@@ -260,13 +262,15 @@ import java.text.*;
 				}
 			}
 
+
 			public static void menuChoice()
 			{
+				java.util.Scanner userInput = new Scanner(System.in);
 				System.out.println("What would you like to do?");
 				System.out.println("   1) Add or delete a student");
 				System.out.println("   2) Change student grades/schedule");
 				System.out.println("   3) Sort students");
-				java.util.Scanner userInput = new Scanner(System.in);
+				
 				int selection = userInput.nextInt();
 				if (selection == 1)
 					{
@@ -281,17 +285,23 @@ import java.text.*;
 					sortStudents();
 					}
 			}
+			
 
+			
+
+			private static void changeRoster()
+				{
+				System.out.println("Would you like to add or delete a student?");
+				System.out.println("   1) Add");
+				System.out.println("   2) Delete");
+				
+				}
+			
 			private static void changeGrades()
 				{
 				// TODO Auto-generated method stub
 				
 				}
-
-			private static void changeRoster()
-				{
-				// TODO Auto-generated method stub
-				
-				}
+			
 
 	}
