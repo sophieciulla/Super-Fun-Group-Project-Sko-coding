@@ -35,7 +35,39 @@ import java.text.*;
 				}
 			else 
 				{
-				//periodSort();
+				periodSort();
+				}
+			}
+
+		private static void periodSort()
+			{
+			System.out.println("What period would you like sorted?");
+			System.out.println("   1) Period 1");
+			System.out.println("   2) Period 2");
+			System.out.println("   3) Period 3");
+			java.util.Scanner userInput = new Scanner(System.in);
+			int selection = userInput.nextInt();
+			Collections.sort(students, new LastNameComparator());
+			if (selection == 1)
+				{
+				Collections.sort(students, new FirstPeriodSort());
+				}
+			else if (selection == 2)
+				{
+				Collections.sort(students, new SecondPeriodSorter());
+				}
+			else 
+				{
+				Collections.sort(students, new ThirdPeriodSorter());
+				}
+			for (int i = 0; i < students.size(); i++)
+				{
+				System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName() + ": ");
+				System.out.println("   First Period: " + students.get(i).getFirstClass() + ": " + students.get(i).getClassGrade1());
+				System.out.println("   Second Period: " + students.get(i).getSecondClass() + ": " + students.get(i).getClassGrade2());
+				System.out.println("   Third Period: " + students.get(i).getThirdClass() + ": " + students.get(i).getClassGrade3());
+				System.out.println("   GPA: " + students.get(i).getGPA());
+				System.out.println("");
 				}
 			}
 
