@@ -4,7 +4,7 @@ import java.util.*;
 import java.text.*;
 ;public class MainMenu
 	{
-		static ArrayList<Group> students = new ArrayList<Group>();
+		static ArrayList<Student> students = new ArrayList<Student>();
 		static String[] array;
 		static double GPA;
 		static double gradeValueOne;
@@ -23,6 +23,49 @@ import java.text.*;
 			System.out.println("   1) Last Name");
 			System.out.println("   2) GPA");
 			System.out.println("   3) Class Period");
+			java.util.Scanner userInput = new Scanner(System.in);
+			int selection = userInput.nextInt();
+			if (selection == 1)
+				{
+				lastNameSort();
+				}
+			else if (selection == 2)
+				{
+				GPASort();
+				}
+			else 
+				{
+				//periodSort();
+				}
+			}
+
+		private static void GPASort()
+			{
+			Collections.sort(students, new LastNameComparator());
+			Collections.sort(students, new GPASorter());
+			for (int i = students.size() - 1; i >= 0; i--)
+				{
+				System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName() + ": ");
+				System.out.println("   First Period: " + students.get(i).getFirstClass() + ": " + students.get(i).getClassGrade1());
+				System.out.println("   Second Period: " + students.get(i).getSecondClass() + ": " + students.get(i).getClassGrade2());
+				System.out.println("   Third Period: " + students.get(i).getThirdClass() + ": " + students.get(i).getClassGrade3());
+				System.out.println("   GPA: " + students.get(i).getGPA());
+				System.out.println("");
+				}
+			}
+
+		private static void lastNameSort()
+			{
+			Collections.sort(students, new LastNameComparator());
+			for (int i = 0; i < students.size(); i++)
+				{
+				System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName() + ": ");
+				System.out.println("   First Period: " + students.get(i).getFirstClass() + ": " + students.get(i).getClassGrade1());
+				System.out.println("   Second Period: " + students.get(i).getSecondClass() + ": " + students.get(i).getClassGrade2());
+				System.out.println("   Third Period: " + students.get(i).getThirdClass() + ": " + students.get(i).getClassGrade3());
+				System.out.println("   GPA: " + students.get(i).getGPA());
+				System.out.println("");
+				}
 			}
 
 		private static void createArray() throws IOException
@@ -37,7 +80,7 @@ import java.text.*;
 				calculateGPAThree();
 				DecimalFormat df = new DecimalFormat("0.00");
 				GPA = (gradeValueOne + gradeValueTwo + gradeValueThree) / 3;
-				students.add(new Group (array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], df.format(GPA)));
+				students.add(new Student (array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], df.format(GPA)));
 				}	
 			}	
 		
