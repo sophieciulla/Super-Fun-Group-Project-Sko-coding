@@ -1,8 +1,8 @@
-
+import java.util.Scanner;
 import java.io.*;
 import java.util.*;
 import java.text.*;
-;public class MainMenu
+public class MainMenu
 	{
 		static ArrayList<Group> students = new ArrayList<Group>();
 		public static void main(String[] args) throws IOException
@@ -10,6 +10,7 @@ import java.text.*;
 			System.out.println("Hello");
 			CreateArray.createArray();	
 			menuChoice();
+			
 			}
 
 			public static void menuChoice()
@@ -27,16 +28,13 @@ import java.text.*;
 					}
 				else if (selection == 2)
 					{
-					changeGrades();
+					ChangeGrades.changeGrades();
 					}
 				else 
 					{
 					sortStudents();
 					}
 			}
-			
-
-			
 
 			private static void changeRoster()
 				{
@@ -46,11 +44,6 @@ import java.text.*;
 				
 				}
 			
-			private static void changeGrades()
-				{
-				// TODO Auto-generated method stub
-				
-				}
 				
 			private static void sortStudents()
 				{
