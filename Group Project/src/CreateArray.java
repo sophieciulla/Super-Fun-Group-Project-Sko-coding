@@ -23,7 +23,7 @@ public class CreateArray
 		calculateGPAThree();
 		DecimalFormat df = new DecimalFormat("0.00");
 		GPA = (gradeValueOne + gradeValueTwo + gradeValueThree) / 3;
-		MainMenu.students.add(new Group (array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], df.format(GPA)));
+		MainMenu.students.add(new Student (array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], df.format(GPA)));
 		
 		}
 	}	

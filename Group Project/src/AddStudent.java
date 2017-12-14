@@ -3,7 +3,7 @@ import java.util.*;
 public class AddStudent
 	{
 
-		public static void changeStudent(ArrayList<Group> students)
+		public static void changeStudent(ArrayList<Student> students)
 			{
 				java.util.Scanner userInput = new Scanner(System.in);
 				int select = userInput.nextInt();
@@ -12,7 +12,7 @@ public class AddStudent
 						System.out.println("What's their name? Also what are their 3 classes and grades?");
 						String info = userInput.nextLine();
 						String [] infos = info.split(" ");
-						students.add(new Group(infos[0], infos[1], infos[2], infos[3], infos[4], infos[5], infos[6], infos[7], " "));
+						students.add(new Student(infos[0], infos[1], infos[2], infos[3], infos[4], infos[5], infos[6], infos[7], " "));
 					}
 				else if (select == 2)
 					{

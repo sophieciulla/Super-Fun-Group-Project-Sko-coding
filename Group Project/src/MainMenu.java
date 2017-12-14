@@ -297,18 +297,7 @@ public class MainMenu
 				System.out.println("   2) Delete");
 				
 				}
-			
-				
-			private static void sortStudents()
-				{
-				java.util.Scanner userInput = new Scanner(System.in);
-				System.out.println("How would you like to sort students?");
-				System.out.println("   1) Last Name");
-				System.out.println("   2) GPA");
-				System.out.println("   3) Class Period");
-				int sortSelection = userInput.nextInt();
-			
 }
 			
 
-	}
+	
