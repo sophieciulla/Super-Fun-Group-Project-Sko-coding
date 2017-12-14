@@ -1,5 +1,5 @@
 
-public class Group 
+public class Student 
 	{
 	private String firstName;
 	private String lastName;
@@ -11,7 +11,7 @@ public class Group
 	private String classGrade3;    
 	private String GPA;
 	
-	public Group (String fn, String ln, String fc, String cg1, String sc, String cg2, String tc, String cg3, String g)
+	public Student (String fn, String ln, String fc, String cg1, String sc, String cg2, String tc, String cg3, String g)
 		{
 		firstName = fn;
 		lastName = ln;
