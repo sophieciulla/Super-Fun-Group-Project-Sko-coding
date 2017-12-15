@@ -49,5 +49,4 @@ public class AddStudent
 						System.out.println("They're OUTA here!");
 					}
 			}
-
 	}

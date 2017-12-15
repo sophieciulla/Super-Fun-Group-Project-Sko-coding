@@ -299,5 +299,3 @@ public class MainMenu
 				}
 }
 			
-
-	
