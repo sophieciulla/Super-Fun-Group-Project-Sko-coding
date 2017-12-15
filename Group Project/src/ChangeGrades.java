@@ -31,9 +31,9 @@ public class ChangeGrades
 					java.util.Scanner userInput2 = new Scanner(System.in);
 					
 					System.out.println("What would you like to change their " +  MainMenu.students.get(selection-1).getFirstClass() + " grade to?");
-					String grade = userInput.nextLine();
+					String grade = userInput2.nextLine();
 					System.out.println();
-					System.out.println("Their "+ MainMenu.students.get(selection-1).getSecondClass() + " grade has been changed to a " + grade);
+					System.out.println("Their "+ MainMenu.students.get(selection-1).getFirstClass() + " grade has been changed to a " + grade);
 					MainMenu.students.get(selection-1).setClassGrade1(grade);
 					}
 					
@@ -43,7 +43,7 @@ public class ChangeGrades
 					java.util.Scanner userInput2 = new Scanner(System.in);
 					
 					System.out.println("What would you like to change their " +  MainMenu.students.get(selection-1).getSecondClass() + " grade to?");
-					String grade = userInput.nextLine();
+					String grade = userInput2.nextLine();
 					System.out.println("Their "+ MainMenu.students.get(selection-1).getSecondClass() + " grade has been changed to a " + grade);
 					MainMenu.students.get(selection-1).setClassGrade2(grade);
 					}
@@ -53,12 +53,60 @@ public class ChangeGrades
 					{
 					java.util.Scanner userInput2 = new Scanner(System.in);
 					System.out.println("What would you like to change their " +  MainMenu.students.get(selection-1).getThirdClass() + " grade to?");
-					String grade = userInput.nextLine();
+					String grade = userInput2.nextLine();
 					System.out.println("Their "+ MainMenu.students.get(selection-1).getThirdClass() + " grade has been changed to a " + grade);
 					MainMenu.students.get(selection-1).setClassGrade3(grade);
 					}
 		
 				}
+				
+				
+				//changing schedule
+				if(gradeOrSchedule == 2)
+				{
+					java.util.Scanner userInput3 = new Scanner(System.in);
+					System.out.println("\n Here are " + MainMenu.students.get(selection-1).getFirstName()+ "'s current classes");
+					System.out.println("   " + MainMenu.students.get(selection-1).getFirstClass() + " ");
+					System.out.println("   " + MainMenu.students.get(selection-1).getSecondClass() + " ");
+					System.out.println("   " + MainMenu.students.get(selection-1).getThirdClass() + " ");
+					System.out.println();
+					System.out.println("Which class would you like to change?");
+					int classNum = userInput3.nextInt();
+					
+					if(classNum == 1)
+					{
+						java.util.Scanner userInput2 = new Scanner(System.in);
+						
+						System.out.println("What would you like to change their " +  MainMenu.students.get(selection-1).getFirstClass() + " class to?");
+						String className = userInput2.nextLine();
+						System.out.println();
+						System.out.println("Their "+ MainMenu.students.get(selection-1).getSecondClass() + " class has been changed to " + className);
+						MainMenu.students.get(selection-1).setFirstClass(className);
+					}
+					
+					if(classNum == 2)
+					{
+						java.util.Scanner userInput2 = new Scanner(System.in);
+						
+						System.out.println("What would you like to change their " +  MainMenu.students.get(selection-1).getSecondClass() + " class to?");
+						String className = userInput2.nextLine();
+						System.out.println();
+						System.out.println("Their "+ MainMenu.students.get(selection-1).getSecondClass() + " class has been changed to " + className);
+						MainMenu.students.get(selection-1).setSecondClass(className);
+					}
+					
+					if(classNum == 2)
+					{
+						java.util.Scanner userInput2 = new Scanner(System.in);
+						
+						System.out.println("What would you like to change their " +  MainMenu.students.get(selection-1).getThirdClass() + " class to?");
+						String className = userInput2.nextLine();
+						System.out.println();
+						System.out.println("Their "+ MainMenu.students.get(selection-1).getThirdClass() + " class has been changed to " + className);
+						MainMenu.students.get(selection-1).setThirdClass(className);
+					}
+				}
+				
 			
 			}
 	}
