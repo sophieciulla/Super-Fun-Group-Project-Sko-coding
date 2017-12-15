@@ -121,7 +121,7 @@ public class MainMenu
 				}	
 			}	
 		
-			private static void calculateGPAThree()
+			static void calculateGPAThree()
 			{
 			if (array[7].equals("A") || array[7].equals("A+"))
 				{
@@ -169,7 +169,7 @@ public class MainMenu
 				}
 			}
 
-			private static void calculateGPATwo()
+			static void calculateGPATwo()
 			{
 			if (array[5].equals("A") || array[5].equals("A+"))
 				{
@@ -217,7 +217,7 @@ public class MainMenu
 				}
 			}
 
-			private static void calculateGPAOne()
+			static void calculateGPAOne()
 			{
 			if (array[3].equals("A") || array[3].equals("A+"))
 				{
@@ -272,13 +272,13 @@ public class MainMenu
 				System.out.println("What would you like to do?");
 				System.out.println("   1) Add or delete a student");
 				System.out.println("   2) Change student grades/schedule");
-
 				System.out.println("   3) Sort students");
 				
 				int selection = userInput.nextInt();
 				if (selection == 1)
 					{
 					changeRoster();
+					menuChoice();
 					}
 				else if (selection == 2)
 					{
@@ -295,9 +295,7 @@ public class MainMenu
 				System.out.println("Would you like to add or delete a student?");
 				System.out.println("   1) Add");
 				System.out.println("   2) Delete");
-				
+				AddStudent.changeStudent(students);
 				}
 }
 			
-
-	
